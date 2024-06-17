@@ -72,7 +72,7 @@
   opacity: 0;
 }
 .animate-on-scroll.up {
-  animation: slide-up 1.5s ease-out;
+  animation: slide-up 1s ease-out;
 }
 .animate-on-scroll.down {
   animation: slide-down 1s ease-out;
@@ -82,15 +82,15 @@
 }
 .animate-on-scroll.appear .phone {
   opacity: 0;
-  animation: slide-down 0.8s ease-out 0.4s forwards;
+  animation: slide-down 0.8s ease-out 0.3s forwards;
 }
 .animate-on-scroll.appear .instagram {
   opacity: 0;
-  animation: slide-down 0.8s ease-out 0.8s forwards;
+  animation: slide-down 0.8s ease-out 0.6s forwards;
 }
 .animate-on-scroll.appear .email {
   opacity: 0;
-  animation: slide-down 0.8s ease-out 1.2s forwards;
+  animation: slide-down 0.8s ease-out 0.9s forwards;
 }
 /* setup end */
 
@@ -300,7 +300,7 @@ p {
 .services-container .service {
   border: 1px solid var(--gray-light);
   width: 350px;
-  padding: 0 30px 0 30px;
+  padding: 0px 30px 0px 30px;
   border-radius: 8px;
 }
 
@@ -368,6 +368,7 @@ p {
   flex-direction: column; /* Stack items vertically */
   justify-content: center; /* Vertically center items */
   align-items: center; /* Horizontally center items */
+  width: 150px;
 }
 
 .contact-item img {
@@ -533,13 +534,13 @@ p {
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   .contact-bar {
     flex-direction: column;
     gap: 20px;
   }
 }
-@media only screen and (min-width: 551px) and (max-width: 1024px) {
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
   .contact-bar {
     gap: 50px;
   }
