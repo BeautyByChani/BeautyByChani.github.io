@@ -38,3 +38,22 @@ Phone.setAttribute("href", "tel:" + decodedPhone);
 Phone.setAttribute("target", "_blank");
 //
 //
+// decode Whatsapp
+//
+//
+var encWhatsapp = "MDc1ODYgMzc1OTQ4";
+
+// Decode the Base64 encoded WhatsApp number
+var decodedWhatsapp = atob(encWhatsapp);
+
+// Remove spaces from the decoded WhatsApp number for href attribute
+var whatsappWithoutSpaces = decodedWhatsapp.replace(/\s/g, "");
+
+// Update the element with the data-whatsapp attribute with the decoded WhatsApp number
+var elementWithDataWhatsapp = document.querySelector("[data-whatsapp]");
+elementWithDataWhatsapp.textContent = decodedWhatsapp; // Retains original spacing
+
+// Update the <a> element href attribute with the WhatsApp link (without spaces)
+const Whatsapp = document.getElementsByClassName("whatsapp")[0];
+Whatsapp.setAttribute("href", "https://wa.me/44" + whatsappWithoutSpaces);
+Whatsapp.setAttribute("target", "_blank");

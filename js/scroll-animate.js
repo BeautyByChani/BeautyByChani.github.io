@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.remove("hidden");
-        if (entry.target.classList.contains("about-section") || entry.target.classList.contains("services-section")) {
+        if (entry.target.classList.contains("about-section") || entry.target.classList.contains("services-section")|| entry.target.classList.contains("gallery-section")) {
           entry.target.classList.add("animate-on-scroll", "up");
         }
         if (entry.target.classList.contains("contact-section")) {
@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, observerOptions);
 
-  const elementsToAnimate = document.querySelectorAll(".about-section, .services-section, .contact-section");
+  const elementsToAnimate = document.querySelectorAll(
+    ".about-section, .services-section, .contact-section,.gallery-section"
+  );
   elementsToAnimate.forEach((element) => {
     element.classList.add("hidden"); // Add hidden class initially
     observer.observe(element);

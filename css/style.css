@@ -11,7 +11,7 @@
 
 @keyframes slide-up {
   from {
-    transform: translateY(100px);
+    transform: translateY(50px);
     opacity: 0;
     scale: 1.1;
   }
@@ -24,7 +24,7 @@
 
 @keyframes slide-down {
   from {
-    transform: translateY(-50px);
+    transform: translateY(-25px);
     opacity: 0;
     scale: 1.1;
   }
@@ -37,7 +37,7 @@
 
 @keyframes slide-right {
   from {
-    transform: translateX(-100px);
+    transform: translateX(-50px);
     opacity: 0;
     scale: 1.1;
   }
@@ -49,7 +49,7 @@
 
 @keyframes slide-left {
   from {
-    transform: translateX(100px);
+    transform: translateX(50px);
     opacity: 0;
     scale: 1.1;
   }
@@ -84,13 +84,17 @@
   opacity: 0;
   animation: slide-down 0.8s ease-out 0.3s forwards;
 }
-.animate-on-scroll.appear .instagram {
+.animate-on-scroll.appear .whatsapp {
   opacity: 0;
   animation: slide-down 0.8s ease-out 0.6s forwards;
 }
-.animate-on-scroll.appear .email {
+.animate-on-scroll.appear .instagram {
   opacity: 0;
   animation: slide-down 0.8s ease-out 0.9s forwards;
+}
+.animate-on-scroll.appear .email {
+  opacity: 0;
+  animation: slide-down 0.8s ease-out 1.2s forwards;
 }
 /* setup end */
 
@@ -295,6 +299,7 @@ p {
   text-align: center;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
+  padding-bottom: 2em;
 }
 
 .services-container .service {
@@ -330,8 +335,38 @@ p {
   margin-top: -0.8em;
 }
 
-.services-section .button-outline {
-  margin-top: 20em;
+.gallery-section {
+  margin: 0 100px;
+  border-radius: 8px;
+  background-color: var(--white);
+  min-height: 400px;
+}
+
+.gallery-section h1 {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  color: var(--gray-light);
+  margin-top: -1.2em;
+  line-height: 0.9em;
+}
+
+.gallery-section .widget {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5em;
+  padding-bottom: 40px;
+}
+
+.gallery-section .btn {
+  text-align: center;
+  margin-top: -3em;
 }
 
 .contact-section {
@@ -435,7 +470,8 @@ p {
 
   .about-section,
   .times-section,
-  .services-section {
+  .services-section,
+  .gallery-section {
     margin: 0 20px;
   }
 
@@ -460,6 +496,9 @@ p {
 
   .services-container .service:nth-child(even) {
     justify-self: center; /* Aligns right column to the left */
+  }
+  .gallery-section .widget {
+    padding: 0 2em 2em 2em;
   }
 }
 
@@ -492,7 +531,8 @@ p {
 
   .about-section,
   .times-section,
-  .services-section {
+  .services-section,
+  .gallery-section {
     margin: 0 50px;
   }
 
